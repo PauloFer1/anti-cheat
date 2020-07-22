@@ -1,0 +1,316 @@
+2020-07-21 21:21:08,569 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplication on paulos-mbp-2.mynet with PID 45420 (/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-21 21:21:08,572 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-21 21:21:09,089 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-21 21:21:09,094 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-21 21:21:09,097 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-21 21:21:09,167 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:21:09,175 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:21:09,177 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:21:09,208 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-21 21:21:09,208 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:21:09,209 INFO com.pfernand.anticheat.services.ExecExternal [main] Executing /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:21:09,218 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appManager': Invocation of init method failed; nested exception is java.io.IOException: Cannot run program "/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app": error=13, Permission denied
+2020-07-21 21:21:09,230 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-21 21:21:09,239 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appManager': Invocation of init method failed; nested exception is java.io.IOException: Cannot run program "/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app": error=13, Permission denied
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.pfernand.anticheat.AntiCheatApplication.main(AntiCheatApplication.java:15)
+Caused by: java.io.IOException: Cannot run program "/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app": error=13, Permission denied
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:591)
+	at java.base/java.lang.Runtime.exec(Runtime.java:415)
+	at java.base/java.lang.Runtime.exec(Runtime.java:312)
+	at com.pfernand.anticheat.services.ExecExternal.exec(ExecExternal.java:14)
+	at com.pfernand.anticheat.services.AppManager.startServer(AppManager.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 18 common frames omitted
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 31 common frames omitted
+2020-07-21 21:21:37,489 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplication on paulos-mbp-2.mynet with PID 45474 (/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-21 21:21:37,499 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-21 21:21:38,152 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-21 21:21:38,157 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-21 21:21:38,160 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-21 21:21:38,228 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:21:38,249 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:21:38,251 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:21:38,283 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-21 21:21:38,284 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:21:38,285 INFO com.pfernand.anticheat.services.ExecExternal [main] Executing /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:21:38,295 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appManager': Invocation of init method failed; nested exception is java.io.IOException: Cannot run program "/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app": error=13, Permission denied
+2020-07-21 21:21:38,307 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-21 21:21:38,329 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appManager': Invocation of init method failed; nested exception is java.io.IOException: Cannot run program "/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app": error=13, Permission denied
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.pfernand.anticheat.AntiCheatApplication.main(AntiCheatApplication.java:15)
+Caused by: java.io.IOException: Cannot run program "/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app": error=13, Permission denied
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:591)
+	at java.base/java.lang.Runtime.exec(Runtime.java:415)
+	at java.base/java.lang.Runtime.exec(Runtime.java:312)
+	at com.pfernand.anticheat.services.ExecExternal.exec(ExecExternal.java:14)
+	at com.pfernand.anticheat.services.AppManager.startServer(AppManager.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 18 common frames omitted
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 31 common frames omitted
+2020-07-21 21:42:19,125 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplication on paulos-mbp-2.mynet with PID 46935 (/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-21 21:42:19,130 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-21 21:42:19,778 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-21 21:42:19,784 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-21 21:42:19,786 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-21 21:42:19,837 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:42:19,846 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:42:19,848 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:42:19,879 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-21 21:42:19,879 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:42:19,881 INFO com.pfernand.anticheat.services.ExecExternal [Thread-72] Executing /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:42:19,887 INFO com.pfernand.anticheat.config.UdpConfig [main] Creating UDP proxy server
+2020-07-21 21:42:19,890 ERROR com.pfernand.anticheat.services.ExecExternal [Thread-72] Error executing file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+java.io.IOException: Cannot run program "/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app": error=13, Permission denied
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:591)
+	at java.base/java.lang.Runtime.exec(Runtime.java:415)
+	at java.base/java.lang.Runtime.exec(Runtime.java:312)
+	at com.pfernand.anticheat.services.ExecExternal.lambda$exec$0(ExecExternal.java:17)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 6 common frames omitted
+2020-07-21 21:42:20,108 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-21 21:42:20,155 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:42:20,156 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-21 21:42:20,157 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:42:20,157 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:42:20,157 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.processUniCastUdpMessage.channel#0' has 1 subscriber(s).
+2020-07-21 21:42:20,157 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:42:20,159 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:42:20,173 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplication in 1.565 seconds (JVM running for 2.515)
+2020-07-21 21:42:20,174 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-21 21:42:20,178 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:42:20,179 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:42:20,179 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.processUniCastUdpMessage.channel#0' has 0 subscriber(s).
+2020-07-21 21:42:20,179 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:42:20,179 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:42:20,180 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-21 21:42:20,180 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:42:20,180 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'
+2020-07-21 21:43:14,713 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplication on paulos-mbp-2.mynet with PID 47005 (/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-21 21:43:14,718 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-21 21:43:15,349 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-21 21:43:15,354 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-21 21:43:15,358 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-21 21:43:15,407 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:43:15,415 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:43:15,417 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:43:15,448 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-21 21:43:15,448 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:43:15,450 INFO com.pfernand.anticheat.services.ExecExternal [Thread-72] Executing /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:43:15,455 INFO com.pfernand.anticheat.config.UdpConfig [main] Creating UDP proxy server
+2020-07-21 21:43:15,507 INFO com.pfernand.anticheat.services.ExecExternal [Thread-72] exit code: 1
+2020-07-21 21:43:15,674 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-21 21:43:15,730 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:43:15,731 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-21 21:43:15,731 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:43:15,731 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:43:15,734 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.processUniCastUdpMessage.channel#0' has 1 subscriber(s).
+2020-07-21 21:43:15,734 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:43:15,735 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:43:15,754 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplication in 1.589 seconds (JVM running for 2.535)
+2020-07-21 21:43:15,755 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-21 21:43:15,759 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:43:15,760 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:43:15,760 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.processUniCastUdpMessage.channel#0' has 0 subscriber(s).
+2020-07-21 21:43:15,760 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:43:15,760 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:43:15,760 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-21 21:43:15,761 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:43:15,761 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'
+2020-07-21 21:43:50,074 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplication on paulos-mbp-2.mynet with PID 47047 (/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-21 21:43:50,077 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-21 21:43:50,732 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-21 21:43:50,737 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-21 21:43:50,740 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-21 21:43:50,789 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:43:50,799 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:43:50,801 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:43:50,829 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-21 21:43:50,830 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:43:50,831 INFO com.pfernand.anticheat.services.ExecExternal [Thread-72] Executing /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:43:50,837 INFO com.pfernand.anticheat.config.UdpConfig [main] Creating UDP proxy server
+2020-07-21 21:43:50,876 INFO com.pfernand.anticheat.services.ExecExternal [Thread-72] exit code: 1
+2020-07-21 21:43:51,069 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-21 21:43:51,112 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:43:51,112 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-21 21:43:51,113 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:43:51,113 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:43:51,113 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.processUniCastUdpMessage.channel#0' has 1 subscriber(s).
+2020-07-21 21:43:51,113 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:43:51,114 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:43:51,133 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplication in 1.594 seconds (JVM running for 2.535)
+2020-07-21 21:43:51,135 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-21 21:43:51,140 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:43:51,141 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:43:51,141 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.processUniCastUdpMessage.channel#0' has 0 subscriber(s).
+2020-07-21 21:43:51,142 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:43:51,142 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:43:51,142 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-21 21:43:51,142 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:43:51,143 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'
+2020-07-21 21:44:14,287 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplication on paulos-mbp-2.mynet with PID 47088 (/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-21 21:44:14,290 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-21 21:44:14,912 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-21 21:44:14,919 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-21 21:44:14,923 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-21 21:44:14,975 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:44:14,983 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:44:14,985 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:44:15,019 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-21 21:44:15,020 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:44:15,021 INFO com.pfernand.anticheat.services.ExecExternal [main] Executing /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:44:15,060 INFO com.pfernand.anticheat.services.ExecExternal [main] exit code: 1
+2020-07-21 21:44:15,066 INFO com.pfernand.anticheat.config.UdpConfig [main] Creating UDP proxy server
+2020-07-21 21:44:15,279 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-21 21:44:15,317 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:44:15,318 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-21 21:44:15,318 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:44:15,318 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:44:15,319 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.processUniCastUdpMessage.channel#0' has 1 subscriber(s).
+2020-07-21 21:44:15,319 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:44:15,320 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:44:15,334 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplication in 1.7 seconds (JVM running for 2.625)
+2020-07-21 21:44:15,336 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-21 21:44:15,340 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:44:15,341 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:44:15,341 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.processUniCastUdpMessage.channel#0' has 0 subscriber(s).
+2020-07-21 21:44:15,341 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:44:15,341 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:44:15,342 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-21 21:44:15,342 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:44:15,342 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'
+2020-07-21 21:45:29,435 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplication on paulos-mbp-2.mynet with PID 47201 (/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-21 21:45:29,438 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-21 21:45:30,010 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-21 21:45:30,016 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-21 21:45:30,019 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-21 21:45:30,065 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:45:30,073 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:45:30,074 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:45:30,111 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-21 21:45:30,111 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:45:30,113 INFO com.pfernand.anticheat.services.ExecExternal [main] Executing /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:45:34,440 INFO com.pfernand.anticheat.services.ExecExternal [main] exit code: 0
+2020-07-21 21:45:34,448 INFO com.pfernand.anticheat.config.UdpConfig [main] Creating UDP proxy server
+2020-07-21 21:45:34,674 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-21 21:45:34,732 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:45:34,733 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-21 21:45:34,733 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:45:34,734 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:45:34,734 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.processUniCastUdpMessage.channel#0' has 1 subscriber(s).
+2020-07-21 21:45:34,734 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:45:34,741 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:45:34,767 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplication in 5.947 seconds (JVM running for 6.838)
+2020-07-21 21:45:34,769 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-21 21:45:34,774 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:45:34,775 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:45:34,775 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.processUniCastUdpMessage.channel#0' has 0 subscriber(s).
+2020-07-21 21:45:34,775 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:45:34,776 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:45:34,776 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-21 21:45:34,776 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:45:34,776 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'
+2020-07-21 21:45:55,315 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplication on paulos-mbp-2.mynet with PID 47241 (/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-21 21:45:55,319 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-21 21:45:55,888 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-21 21:45:55,893 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-21 21:45:55,896 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-21 21:45:55,945 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:45:55,954 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:45:55,955 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-21 21:45:55,985 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-21 21:45:55,986 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:45:55,987 INFO com.pfernand.anticheat.services.ExecExternal [Thread-72] Executing /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-21 21:45:56,017 INFO com.pfernand.anticheat.config.UdpConfig [main] Creating UDP proxy server
+2020-07-21 21:45:56,109 INFO com.pfernand.anticheat.services.ExecExternal [Thread-72] exit code: 0
+2020-07-21 21:45:56,325 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-21 21:45:56,372 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:45:56,373 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-21 21:45:56,373 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:45:56,373 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:45:56,375 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.processUniCastUdpMessage.channel#0' has 1 subscriber(s).
+2020-07-21 21:45:56,376 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:45:56,377 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:45:56,396 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplication in 1.662 seconds (JVM running for 2.633)
+2020-07-21 21:45:56,398 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-21 21:45:56,402 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:45:56,403 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'processUniCastUdpMessage.channel#0' channel
+2020-07-21 21:45:56,404 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.processUniCastUdpMessage.channel#0' has 0 subscriber(s).
+2020-07-21 21:45:56,404 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'processUniCastUdpMessage.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method processUniCastUdpMessage'
+2020-07-21 21:45:56,404 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-21 21:45:56,404 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-21 21:45:56,405 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-21 21:45:56,408 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'

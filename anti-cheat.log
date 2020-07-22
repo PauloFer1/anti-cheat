@@ -1,0 +1,389 @@
+2020-07-22 20:27:08,758 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplicationTests on paulos-mbp-2.mynet with PID 9562 (started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-22 20:27:08,766 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-22 20:27:09,313 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameReceivingFlow' defined in class path resource [com/pfernand/anticheat/config/UdpConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=udpConfig; factoryMethodName=gameReceivingFlow; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/pfernand/anticheat/config/UdpConfig.class]] for bean 'gameReceivingFlow': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testUdpConfig; factoryMethodName=gameReceivingFlow; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]] bound.
+2020-07-22 20:27:09,323 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-22 20:27:09,335 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'gameReceivingFlow', defined in class path resource [com/pfernand/anticheat/config/UdpConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/pfernand/anticheat/config/TestUdpConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-07-22 20:27:09,405 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplicationTests on paulos-mbp-2.mynet with PID 9562 (started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-22 20:27:09,406 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-22 20:27:09,570 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameReceivingFlow' defined in class path resource [com/pfernand/anticheat/config/UdpConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=udpConfig; factoryMethodName=gameReceivingFlow; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/pfernand/anticheat/config/UdpConfig.class]] for bean 'gameReceivingFlow': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testUdpConfig; factoryMethodName=gameReceivingFlow; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]] bound.
+2020-07-22 20:27:09,573 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-22 20:27:09,576 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'gameReceivingFlow', defined in class path resource [com/pfernand/anticheat/config/UdpConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/pfernand/anticheat/config/TestUdpConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-07-22 20:27:09,581 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@23aa363a] to prepare test instance [com.pfernand.anticheat.AntiCheatApplicationTests@2807bdeb]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:341)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:346)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:341)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:340)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:263)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:256)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:255)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:107)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:71)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:132)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameReceivingFlow' defined in class path resource [com/pfernand/anticheat/config/UdpConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=udpConfig; factoryMethodName=gameReceivingFlow; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/pfernand/anticheat/config/UdpConfig.class]] for bean 'gameReceivingFlow': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testUdpConfig; factoryMethodName=gameReceivingFlow; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]] bound.
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.registerBeanDefinition(DefaultListableBeanFactory.java:941)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:286)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:280)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:707)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:533)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 64 common frames omitted
+2020-07-22 20:29:04,201 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplicationTests on paulos-mbp-2.mynet with PID 9774 (started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-22 20:29:04,204 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-22 20:29:05,442 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-22 20:29:05,449 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-22 20:29:05,460 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-22 20:29:05,614 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:29:05,680 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:29:05,690 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:29:05,825 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-22 20:29:05,826 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: MOHAA.exe
+2020-07-22 20:29:05,833 INFO com.pfernand.anticheat.services.ExecExternal [Thread-70] Executing MOHAA.exe
+2020-07-22 20:29:05,852 ERROR com.pfernand.anticheat.services.ExecExternal [Thread-70] Error executing file: MOHAA.exe
+java.io.IOException: Cannot run program "MOHAA.exe": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:591)
+	at java.base/java.lang.Runtime.exec(Runtime.java:415)
+	at java.base/java.lang.Runtime.exec(Runtime.java:312)
+	at com.pfernand.anticheat.services.ExecExternal.lambda$exec$0(ExecExternal.java:17)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 6 common frames omitted
+2020-07-22 20:29:06,827 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-22 20:29:06,998 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:29:07,000 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-22 20:29:07,001 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:29:07,002 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:29:07,004 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.testGameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:29:07,005 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:29:07,006 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:29:07,007 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.gameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:29:07,008 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:29:07,011 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:29:07,051 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:29:07,084 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplicationTests in 3.934 seconds (JVM running for 7.801)
+2020-07-22 20:29:07,100 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-22 20:29:08,038 INFO org.springframework.integration.handler.support.MessagingMethodInvokerHelper [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Overriding default instance of MessageHandlerMethodFactory with provided one.
+2020-07-22 20:29:08,046 INFO com.pfernand.anticheat.services.UdpServer [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Hello world
+2020-07-22 20:29:08,111 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:29:08,112 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:29:08,113 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:29:08,114 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.testGameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:29:08,114 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:29:08,115 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:29:08,116 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.gameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:29:08,116 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:29:08,116 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:29:08,117 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-22 20:29:08,117 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:29:08,118 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'
+2020-07-22 20:31:14,390 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplicationTests on paulos-mbp-2.mynet with PID 10005 (started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-22 20:31:14,396 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-22 20:31:16,357 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-22 20:31:16,362 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-22 20:31:16,370 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-22 20:31:16,482 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:31:16,513 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:31:16,518 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:31:16,619 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-22 20:31:16,620 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-22 20:31:16,627 INFO com.pfernand.anticheat.services.ExecExternal [Thread-70] Executing /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+2020-07-22 20:31:16,640 ERROR com.pfernand.anticheat.services.ExecExternal [Thread-70] Error executing file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+java.io.IOException: Cannot run program "/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:591)
+	at java.base/java.lang.Runtime.exec(Runtime.java:415)
+	at java.base/java.lang.Runtime.exec(Runtime.java:312)
+	at com.pfernand.anticheat.services.ExecExternal.lambda$exec$0(ExecExternal.java:17)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 6 common frames omitted
+2020-07-22 20:31:17,257 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-22 20:31:17,360 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:31:17,361 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-22 20:31:17,362 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:31:17,363 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:31:17,364 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.testGameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:31:17,364 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:31:17,365 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:31:17,366 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.gameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:31:17,367 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:31:17,369 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:31:17,370 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:31:17,388 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplicationTests in 3.957 seconds (JVM running for 6.05)
+2020-07-22 20:31:17,390 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-22 20:31:17,876 INFO org.springframework.integration.handler.support.MessagingMethodInvokerHelper [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Overriding default instance of MessageHandlerMethodFactory with provided one.
+2020-07-22 20:31:17,882 INFO com.pfernand.anticheat.services.UdpServer [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Hello world
+2020-07-22 20:31:17,884 INFO org.springframework.integration.handler.support.MessagingMethodInvokerHelper [testGameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Overriding default instance of MessageHandlerMethodFactory with provided one.
+2020-07-22 20:31:17,885 INFO com.pfernand.anticheat.config.TestUdpServer [testGameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Test Game server receiving: Hello world
+2020-07-22 20:31:17,904 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:31:17,905 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:31:17,905 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:31:17,906 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.testGameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:31:17,906 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:31:17,906 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:31:17,907 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.gameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:31:17,907 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:31:17,907 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:31:17,908 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-22 20:31:17,908 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:31:17,909 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'
+2020-07-22 20:32:44,686 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplicationTests on paulos-mbp-2.mynet with PID 10195 (started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-22 20:32:44,689 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-22 20:32:45,322 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-22 20:32:45,332 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-22 20:32:45,337 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-22 20:32:45,453 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:32:45,483 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:32:45,488 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:32:45,565 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-22 20:32:45,565 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Applications/VLC.app
+2020-07-22 20:32:45,567 INFO com.pfernand.anticheat.services.ExecExternal [Thread-70] Executing /Applications/VLC.app
+2020-07-22 20:32:45,578 ERROR com.pfernand.anticheat.services.ExecExternal [Thread-70] Error executing file: /Applications/VLC.app
+java.io.IOException: Cannot run program "/Applications/VLC.app": error=13, Permission denied
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:591)
+	at java.base/java.lang.Runtime.exec(Runtime.java:415)
+	at java.base/java.lang.Runtime.exec(Runtime.java:312)
+	at com.pfernand.anticheat.services.ExecExternal.lambda$exec$0(ExecExternal.java:17)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 6 common frames omitted
+2020-07-22 20:32:46,121 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-22 20:32:46,211 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:32:46,212 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-22 20:32:46,214 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:32:46,215 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:32:46,216 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.testGameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:32:46,216 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:32:46,217 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:32:46,217 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.gameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:32:46,218 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:32:46,220 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:32:46,223 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:32:46,240 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplicationTests in 2.099 seconds (JVM running for 3.987)
+2020-07-22 20:32:46,242 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-22 20:32:46,684 INFO org.springframework.integration.handler.support.MessagingMethodInvokerHelper [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Overriding default instance of MessageHandlerMethodFactory with provided one.
+2020-07-22 20:32:46,723 INFO com.pfernand.anticheat.services.UdpServer [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Hello world
+2020-07-22 20:32:46,724 INFO org.springframework.integration.handler.support.MessagingMethodInvokerHelper [testGameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Overriding default instance of MessageHandlerMethodFactory with provided one.
+2020-07-22 20:32:46,725 INFO com.pfernand.anticheat.config.TestUdpServer [testGameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Test Game server receiving: Hello world
+2020-07-22 20:32:46,739 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:32:46,739 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:32:46,740 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:32:46,740 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.testGameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:32:46,741 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:32:46,741 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:32:46,741 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.gameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:32:46,741 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:32:46,742 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:32:46,742 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-22 20:32:46,742 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:32:46,743 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'
+2020-07-22 20:33:32,310 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplicationTests on paulos-mbp-2.mynet with PID 10278 (started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-22 20:33:32,312 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-22 20:33:33,094 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-22 20:33:33,099 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-22 20:33:33,106 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-22 20:33:33,199 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:33:33,220 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:33:33,225 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:33:33,302 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-22 20:33:33,303 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Applications/VLC.app
+2020-07-22 20:33:33,306 INFO com.pfernand.anticheat.services.ExecExternal [Thread-70] Executing /Applications/VLC.app
+2020-07-22 20:33:33,992 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-22 20:33:34,112 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:33:34,112 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-22 20:33:34,113 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:33:34,116 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:33:34,118 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.testGameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:33:34,119 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:33:34,120 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:33:34,121 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.gameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:33:34,122 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:33:34,125 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:33:34,134 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:33:34,151 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplicationTests in 2.46 seconds (JVM running for 4.274)
+2020-07-22 20:33:34,153 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-22 20:33:34,714 INFO org.springframework.integration.handler.support.MessagingMethodInvokerHelper [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Overriding default instance of MessageHandlerMethodFactory with provided one.
+2020-07-22 20:33:34,721 INFO com.pfernand.anticheat.services.UdpServer [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Hello world
+2020-07-22 20:33:34,723 INFO org.springframework.integration.handler.support.MessagingMethodInvokerHelper [testGameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Overriding default instance of MessageHandlerMethodFactory with provided one.
+2020-07-22 20:33:34,723 INFO com.pfernand.anticheat.config.TestUdpServer [testGameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Test Game server receiving: Hello world
+2020-07-22 20:33:34,741 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:33:34,742 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:33:34,743 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:33:34,743 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.testGameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:33:34,744 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:33:34,744 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:33:34,744 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.gameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:33:34,744 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:33:34,745 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:33:34,745 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-22 20:33:34,745 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:33:34,747 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'
+2020-07-22 20:35:05,207 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplicationTests on paulos-mbp-2.mynet with PID 10460 (started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-22 20:35:05,210 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-22 20:35:05,701 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-07-22 20:35:05,705 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-07-22 20:35:05,711 INFO org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-07-22 20:35:05,785 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:35:05,806 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:35:05,813 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:35:05,889 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-22 20:35:05,890 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Applications/VLC.app
+2020-07-22 20:35:05,893 INFO com.pfernand.anticheat.services.ExecExternal [Thread-70] Executing /Applications/VLC.app
+2020-07-22 20:35:05,898 ERROR com.pfernand.anticheat.services.ExecExternal [Thread-70] Error executing file: /Applications/VLC.app
+java.io.IOException: Cannot run program "/Applications/VLC.app": error=13, Permission denied
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:591)
+	at java.base/java.lang.Runtime.exec(Runtime.java:415)
+	at java.base/java.lang.Runtime.exec(Runtime.java:312)
+	at com.pfernand.anticheat.services.ExecExternal.lambda$exec$0(ExecExternal.java:17)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 6 common frames omitted
+2020-07-22 20:35:06,258 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-07-22 20:35:06,336 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:35:06,337 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.errorChannel' has 1 subscriber(s).
+2020-07-22 20:35:06,338 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:35:06,339 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:35:06,340 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.testGameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:35:06,340 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:35:06,340 INFO org.springframework.integration.endpoint.EventDrivenConsumer [main] Adding {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:35:06,341 INFO org.springframework.integration.channel.AbstractSubscribableChannel [main] Channel 'application.gameReceivingFlow.channel#0' has 1 subscriber(s).
+2020-07-22 20:35:06,342 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:35:06,344 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:35:06,346 INFO org.springframework.integration.endpoint.AbstractEndpoint [main] started bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:35:06,357 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplicationTests in 1.6 seconds (JVM running for 2.962)
+2020-07-22 20:35:06,359 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-22 20:35:06,802 INFO org.springframework.integration.handler.support.MessagingMethodInvokerHelper [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Overriding default instance of MessageHandlerMethodFactory with provided one.
+2020-07-22 20:35:06,808 INFO com.pfernand.anticheat.services.UdpServer [gameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Hello world
+2020-07-22 20:35:06,809 INFO org.springframework.integration.handler.support.MessagingMethodInvokerHelper [testGameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Overriding default instance of MessageHandlerMethodFactory with provided one.
+2020-07-22 20:35:06,811 INFO com.pfernand.anticheat.config.TestUdpServer [testGameReceivingFlow.ip:udp-inbound-channel-adapter#0-ip:udp-inbound-channel-adapter] Test Game server receiving: Hello world
+2020-07-22 20:35:06,856 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:35:06,857 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.ip:udp-inbound-channel-adapter#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:35:06,858 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'testGameReceivingFlow.channel#0' channel
+2020-07-22 20:35:06,859 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.testGameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:35:06,859 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'testGameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/TestUdpConfig.class]'; from source: 'bean method testGameReceivingFlow'
+2020-07-22 20:35:06,860 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {service-activator} as a subscriber to the 'gameReceivingFlow.channel#0' channel
+2020-07-22 20:35:06,861 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.gameReceivingFlow.channel#0' has 0 subscriber(s).
+2020-07-22 20:35:06,861 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean 'gameReceivingFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/pfernand/anticheat/config/UdpConfig.class]'; from source: 'bean method gameReceivingFlow'
+2020-07-22 20:35:06,861 INFO org.springframework.integration.endpoint.EventDrivenConsumer [SpringContextShutdownHook] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-07-22 20:35:06,862 INFO org.springframework.integration.channel.AbstractSubscribableChannel [SpringContextShutdownHook] Channel 'application.errorChannel' has 0 subscriber(s).
+2020-07-22 20:35:06,862 INFO org.springframework.integration.endpoint.AbstractEndpoint [SpringContextShutdownHook] stopped bean '_org.springframework.integration.errorLogger'
+2020-07-22 20:35:06,863 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'taskScheduler'

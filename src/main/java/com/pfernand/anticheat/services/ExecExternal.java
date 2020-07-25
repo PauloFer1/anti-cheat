@@ -14,8 +14,11 @@ public class ExecExternal {
       processBuilder.command("open", path);
       Process process;
       try {
-        process = Runtime.getRuntime().exec(path);
-//        process = processBuilder.start();
+        if (System.getProperty("os.name").toLowerCase().contains("mac")) {
+          process = processBuilder.start();
+        } else {
+          process = Runtime.getRuntime().exec(path);
+        }
       } catch (IOException e) {
         log.error("Error executing file: {}", path, e);
         throw new RuntimeException(e);

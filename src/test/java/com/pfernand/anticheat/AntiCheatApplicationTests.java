@@ -12,11 +12,53 @@ class AntiCheatApplicationTests {
 
 	@Test
 	void contextLoads() {
-		UnicastSendingMessageHandler handler =
+		UnicastSendingMessageHandler game =
 				new UnicastSendingMessageHandler("localhost", 11111);
+		String challenge = "get challenge";
+		game.handleMessage(MessageBuilder.withPayload(challenge).build());
+		game.handleMessage(MessageBuilder.withPayload(challenge).build());
+		game.handleMessage(MessageBuilder.withPayload(challenge).build());
 
-		String payload = "Hello world";
-		handler.handleMessage(MessageBuilder.withPayload(payload).build());
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		String challengeResponse = "challenge response";
+		UnicastSendingMessageHandler server =
+				new UnicastSendingMessageHandler("localhost", 57328);
+		server.handleMessage(MessageBuilder.withPayload(challengeResponse).build());
+		server.handleMessage(MessageBuilder.withPayload(challengeResponse).build());
+		server.handleMessage(MessageBuilder.withPayload(challengeResponse).build());
+
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		String connect = "connect";
+		game.handleMessage(MessageBuilder.withPayload(connect).build());
+		game.handleMessage(MessageBuilder.withPayload(connect).build());
+		game.handleMessage(MessageBuilder.withPayload(connect).build());
+
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		String connectResponse = "connect response";
+		server.handleMessage(MessageBuilder.withPayload(connectResponse).build());
+		server.handleMessage(MessageBuilder.withPayload(connectResponse).build());
+		server.handleMessage(MessageBuilder.withPayload(connectResponse).build());
+
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

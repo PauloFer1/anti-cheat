@@ -10,11 +10,11 @@ import org.springframework.integration.ip.udp.UnicastReceivingChannelAdapter;
 @TestConfiguration
 public class TestUdpConfig {
 
-  @Bean
-  public IntegrationFlow testGameReceivingFlow(final TestUdpServer testUdpServer, @Value("${server.port}") final int serverPort) {
-    return IntegrationFlows
-        .from(new UnicastReceivingChannelAdapter(serverPort))
-        .handle(testUdpServer, "handleMessage")
-        .get();
-  }
+//  @Bean
+//  public IntegrationFlow testGameReceivingFlow(final TestUdpServer testUdpServer, @Value("${server.port}") final int serverPort) {
+//    return IntegrationFlows
+//        .from(new UnicastReceivingChannelAdapter(serverPort))
+//        .handle(testUdpServer, "handleMessage")
+//        .get();
+//  }
 }

@@ -1,0 +1,7 @@
+app.executable.path: /Users/paulofernandes/Documents/mohaa/Ajuda/MOHAA_cgamex86/MOHAA.exe
+app.forbidden-files: corrpt.dll,file2
+
+server.ip: localhost
+server.port: 12243
+
+logging.level.com.pfernand.anticheat: DEBUG

@@ -7,7 +7,7 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.test.context.TestPropertySource;
 
 @SpringBootTest
-@TestPropertySource(locations = "classpath:application-test.properties")
+@TestPropertySource(locations = "classpath:application-test.yml")
 class AntiCheatApplicationTests {
 
 	@Test
@@ -15,8 +15,6 @@ class AntiCheatApplicationTests {
 		UnicastSendingMessageHandler game =
 				new UnicastSendingMessageHandler("localhost", 11111);
 		String challenge = "get challenge";
-		game.handleMessage(MessageBuilder.withPayload(challenge).build());
-		game.handleMessage(MessageBuilder.withPayload(challenge).build());
 		game.handleMessage(MessageBuilder.withPayload(challenge).build());
 
 		try {
@@ -29,8 +27,6 @@ class AntiCheatApplicationTests {
 		UnicastSendingMessageHandler server =
 				new UnicastSendingMessageHandler("localhost", 57328);
 		server.handleMessage(MessageBuilder.withPayload(challengeResponse).build());
-		server.handleMessage(MessageBuilder.withPayload(challengeResponse).build());
-		server.handleMessage(MessageBuilder.withPayload(challengeResponse).build());
 
 		try {
 			Thread.sleep(100);
@@ -39,8 +35,6 @@ class AntiCheatApplicationTests {
 		}
 
 		String connect = "connect";
-		game.handleMessage(MessageBuilder.withPayload(connect).build());
-		game.handleMessage(MessageBuilder.withPayload(connect).build());
 		game.handleMessage(MessageBuilder.withPayload(connect).build());
 
 		try {
@@ -51,14 +45,6 @@ class AntiCheatApplicationTests {
 
 		String connectResponse = "connect response";
 		server.handleMessage(MessageBuilder.withPayload(connectResponse).build());
-		server.handleMessage(MessageBuilder.withPayload(connectResponse).build());
-		server.handleMessage(MessageBuilder.withPayload(connectResponse).build());
-
-		try {
-			Thread.sleep(100);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 	}
 
 }

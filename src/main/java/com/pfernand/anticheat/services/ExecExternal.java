@@ -2,11 +2,13 @@ package com.pfernand.anticheat.services;
 
 import java.io.IOException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 @Slf4j
+@Component
 public class ExecExternal {
 
-  public void exec(final String path) {
+  public void exec(final String path) throws IOException {
 
     Runnable executableRunnable = () -> {
       log.info("Executing {}", path);

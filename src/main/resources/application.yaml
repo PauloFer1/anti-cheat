@@ -1,0 +1,16 @@
+spring:
+  main:
+    web-application-type: NONE
+    banner-mode: off
+
+#app.executable.path=/Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/classes/VLC.app
+app:
+  executable:
+    path: MOHAA.exe
+  forbidden-files: corruption 4.5.exe,corrpt.dll,cgamex86.dll
+  password: covid
+  config:
+    path: main\\config\\unnamedsoldier.cfg
+server:
+  ip: 96.10.41.134
+  port: 12243

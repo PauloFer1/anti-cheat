@@ -20,18 +20,13 @@ public class UdpServer {
 
   public void handleMessage(Message message)
   {
-//    log.info("Received message: {}", message.toString());
     final Message toSendMessage = MessageBuilder.withPayload(message.getPayload()).build();
-    log.info("Sending [{}] to {} with data: {}",
+    log.debug("Sending [{}] to {} with data: {}",
         message.toString(),
         unicastSendingMessageHandler.getHost() + ":" + unicastSendingMessageHandler.getPort(),
         new String((byte []) message.getPayload())
     );
-    log.info("New Message headers: {}", toSendMessage.getHeaders().toString());
-//    log.info("Socket AckPort: {}, Port: {}",
-//        unicastSendingMessageHandler.getAckPort(),
-//        unicastSendingMessageHandler.getPort()
-//        );
+    log.debug("New Message headers: {}", toSendMessage.getHeaders().toString());
     unicastSendingMessageHandler.handleMessage(toSendMessage);
   }
 }

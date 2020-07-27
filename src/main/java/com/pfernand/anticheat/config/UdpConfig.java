@@ -1,19 +1,14 @@
 package com.pfernand.anticheat.config;
 
 import com.pfernand.anticheat.services.UdpServer;
-import java.net.DatagramSocket;
-import java.net.InetSocketAddress;
-import java.net.SocketException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.channel.DirectChannel;
 import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.IntegrationFlows;
-import org.springframework.integration.expression.FunctionExpression;
 import org.springframework.integration.ip.udp.UnicastReceivingChannelAdapter;
 import org.springframework.integration.ip.udp.UnicastSendingMessageHandler;
 import org.springframework.messaging.MessageChannel;
@@ -23,17 +18,15 @@ import org.springframework.messaging.MessageChannel;
 public class UdpConfig {
 
   @Bean
-  public UnicastReceivingChannelAdapter serverReceivingChannelAdapter(final MessageChannel requestChannel) {
+  public UnicastReceivingChannelAdapter serverReceivingChannelAdapter() {
     final UnicastReceivingChannelAdapter adapter = new UnicastReceivingChannelAdapter(57328);
-    adapter.setOutputChannel(requestChannel);
     adapter.setLookupHost(false);
     return adapter;
   }
 
   @Bean
-  public UnicastReceivingChannelAdapter gameReceivingChannelAdapter(final MessageChannel gameChannel) {
+  public UnicastReceivingChannelAdapter gameReceivingChannelAdapter() {
     final UnicastReceivingChannelAdapter adapter = new UnicastReceivingChannelAdapter(11111);
-    adapter.setOutputChannel(gameChannel);
     adapter.setLookupHost(false);
     return adapter;
   }

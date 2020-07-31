@@ -1,5 +1,12 @@
-# MOHAA Anti-cheat
+##############################################################
+#                                                            #
+#                     MOHAA NO cheats                        #
+#                                                            #
+##############################################################
 
+
+## Pré requisitos
+1. Java 8
 
 ## Instruções
 
@@ -10,6 +17,15 @@
 5. Não colocar password
 6. Conectar e Jogar
 
+## Como funciona
+MOHAA NO cheats age como um gateway de baixa latência. Quando iniciada, a aplicação inicia o jogo como um processo filho e intercepta todo o tráfego com destino ao servidor.
+Desta forma qualquer anomalia é detectada no startup, como ficheiros não originais, e assim não permitindo que o jogo continue.
+Para o jogo poder conectar ao servidor, a aplicação envia primeiro um pedido para requirir a permissão da conexão, desta forma o servidor apenas aceita conexões através
+deste gateway e não directamente do jogo.
+
+### Como contribuir?
+A aplicação apenas bloqueia cheats conhecidos entre o grupo. Cheats novos ou desconhecidos podem não ser detectados. Se soubers de algum fala no grupo,
+ou então usa-o e fode-os a todos.
 
 ### FAQ
 

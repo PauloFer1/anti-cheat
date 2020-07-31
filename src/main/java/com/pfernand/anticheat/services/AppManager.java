@@ -17,11 +17,10 @@ public class AppManager {
   private final FileFinder fileFinder;
   private final FileChecksum fileChecksum;
   private final PasswordWriter passwordWriter;
+  private final ServerPasswordReader serverPasswordReader;
 
   @Value("${app.executable.path}")
   private final String executablePath;
-  @Value("${app.password}")
-  private final String appPassword;
   @Value("${app.config.path}")
   private final String appConfigPath;
 
@@ -31,7 +30,8 @@ public class AppManager {
     log.info("Executable file: {}", executablePath);
     fileFinder.findCheatFiles();
     fileChecksum.verifyExecFile(executablePath);
-    passwordWriter.setPassword(appPassword, appConfigPath);
+    final String gamePassword = serverPasswordReader.getPassword();
+    passwordWriter.setPassword(appConfigPath, gamePassword);
     execExternal.exec(executablePath);
   }
 

@@ -8,9 +8,12 @@ app:
   executable:
     path: MOHAA.exe
   forbidden-files: corruption 4.5.exe,corrpt.dll,cgamex86.dll
-  password: covid
   config:
-    path: main\\config\\unnamedsoldier.cfg
+    path: main\\configs\\unnamedsoldier.cfg
 server:
   ip: 96.10.41.134
   port: 12243
+  ftp-port: 8821
+  username: ENC(OJ/bC1I68m0z6jMKLnpMiD3torP/afWw)
+  password: ENC(EbkLpYjQTpqSrUBk9kv/DS8602eMIbsm)
+  config-path: 96.10.41.134_12243/main/server.cfg

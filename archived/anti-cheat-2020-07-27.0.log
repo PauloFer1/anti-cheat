@@ -1,0 +1,23 @@
+2020-07-27 21:14:46,100 INFO org.springframework.boot.StartupInfoLogger [main] Starting AntiCheatApplicationTests on paulos-mbp-2.mynet with PID 65410 (started by paulofernandes in /Users/paulofernandes/Documents/dev/pfernand/anti-cheat)
+2020-07-27 21:14:46,112 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-27 21:14:46,116 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-27 21:14:46,849 INFO com.pfernand.anticheat.services.AppManager [main] Starting anti cheat
+2020-07-27 21:14:46,849 INFO com.pfernand.anticheat.services.AppManager [main] Executable file: /Users/paulofernandes/Documents/mohaa/Ajuda/MOHAA_cgamex86/MOHAA.exe
+2020-07-27 21:14:46,851 DEBUG com.pfernand.anticheat.services.FileFinder [main] Searching for file: [corrpt.dll, file2]
+2020-07-27 21:14:46,871 DEBUG com.pfernand.anticheat.services.FileChecksum [main] 1621562286
+2020-07-27 21:14:46,873 DEBUG com.pfernand.anticheat.services.PasswordWriter [main] Saving file: covid
+2020-07-27 21:14:46,875 INFO com.pfernand.anticheat.services.ExecExternal [Thread-70] Executing /Users/paulofernandes/Documents/mohaa/Ajuda/MOHAA_cgamex86/MOHAA.exe
+2020-07-27 21:14:47,170 INFO com.pfernand.anticheat.services.ExecExternal [Thread-70] exit code: 0
+2020-07-27 21:14:47,618 INFO org.springframework.boot.StartupInfoLogger [main] Started AntiCheatApplicationTests in 2.989 seconds (JVM running for 4.197)
+2020-07-27 21:14:47,625 INFO com.pfernand.anticheat.AntiCheatApplication [main] EXECUTING : command line runner
+2020-07-27 21:14:47,989 DEBUG com.pfernand.anticheat.services.UdpServer [gameReceivingChannelAdapter-ip:udp-inbound-channel-adapter] Sending [GenericMessage [payload=byte[13], headers={ip_packetAddress=/127.0.0.1:58818, ip_address=127.0.0.1, id=b5b4c78f-e212-30f6-df29-a187c4831abe, ip_port=58818, ip_hostname=127.0.0.1, timestamp=1595880887983}]] to localhost:12243 with data: get challenge
+2020-07-27 21:14:47,989 DEBUG com.pfernand.anticheat.services.UdpServer [gameReceivingChannelAdapter-ip:udp-inbound-channel-adapter] New Message headers: {id=a4f21ec1-3166-04b5-a266-51507de9cda8, timestamp=1595880887988}
+2020-07-27 21:14:48,082 DEBUG com.pfernand.anticheat.services.UdpServer [serverReceivingChannelAdapter-ip:udp-inbound-channel-adapter] Sending [GenericMessage [payload=byte[18], headers={ip_packetAddress=/127.0.0.1:58819, ip_address=127.0.0.1, id=e99740dd-22fe-7607-7927-e19af4997540, ip_port=58819, ip_hostname=127.0.0.1, timestamp=1595880888082}]] to 127.0.0.1:12203 with data: challenge response
+2020-07-27 21:14:48,082 DEBUG com.pfernand.anticheat.services.UdpServer [serverReceivingChannelAdapter-ip:udp-inbound-channel-adapter] New Message headers: {id=2bdc7060-10fc-32fb-4883-6494e1cef67c, timestamp=1595880888082}
+2020-07-27 21:14:48,184 DEBUG com.pfernand.anticheat.services.UdpServer [gameReceivingChannelAdapter-ip:udp-inbound-channel-adapter] Sending [GenericMessage [payload=byte[7], headers={ip_packetAddress=/127.0.0.1:58818, ip_address=127.0.0.1, id=f884a7f8-4c4a-050a-cb24-54a9e8fbab31, ip_port=58818, ip_hostname=127.0.0.1, timestamp=1595880888184}]] to localhost:12243 with data: connect
+2020-07-27 21:14:48,185 DEBUG com.pfernand.anticheat.services.UdpServer [gameReceivingChannelAdapter-ip:udp-inbound-channel-adapter] New Message headers: {id=3eed1ce0-657a-6dee-8233-b9707ca3217f, timestamp=1595880888184}
+2020-07-27 21:14:48,287 DEBUG com.pfernand.anticheat.services.UdpServer [serverReceivingChannelAdapter-ip:udp-inbound-channel-adapter] Sending [GenericMessage [payload=byte[16], headers={ip_packetAddress=/127.0.0.1:58819, ip_address=127.0.0.1, id=cd8cf7b5-f6c4-9888-fba7-cde3d079453b, ip_port=58819, ip_hostname=127.0.0.1, timestamp=1595880888285}]] to 127.0.0.1:12203 with data: connect response
+2020-07-27 21:14:48,287 DEBUG com.pfernand.anticheat.services.UdpServer [serverReceivingChannelAdapter-ip:udp-inbound-channel-adapter] New Message headers: {id=262d0773-a1b5-d4d9-d2bd-d71f7d73a063, timestamp=1595880888285}
+2020-07-27 21:14:48,347 DEBUG com.pfernand.anticheat.services.PasswordWriter [main] Saving file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/test-classes/config/file_without_line.cfg
+2020-07-27 21:14:48,366 DEBUG com.pfernand.anticheat.services.PasswordWriter [main] Saving file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/test-classes/config/file.cfg
+2020-07-27 21:14:48,370 DEBUG com.pfernand.anticheat.services.PasswordWriter [main] Saving file: /Users/paulofernandes/Documents/dev/pfernand/anti-cheat/target/test-classes/config/new_file.cfg
